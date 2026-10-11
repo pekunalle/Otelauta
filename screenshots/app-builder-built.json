@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OTELAUTA",
+      "hasCanvas": false,
+      "bodyTextLen": 1220,
+      "bodyTextHash": "ad0e3ce74f3e983e4d1b6f83daf288d6afb60077be991943a02488f65b2d8084",
+      "bodyTextPrefix": "METALLIKITARA OTELAUTA Valitse vire, juurisävel ja kuvio. Otelau",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OTELAUTA",
+      "hasCanvas": false,
+      "bodyTextLen": 1220,
+      "bodyTextHash": "ad0e3ce74f3e983e4d1b6f83daf288d6afb60077be991943a02488f65b2d8084",
+      "bodyTextPrefix": "METALLIKITARA OTELAUTA Valitse vire, juurisävel ja kuvio. Otelau",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

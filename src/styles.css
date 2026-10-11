@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0908;
+  --color-surface: #141210;
+  --color-elevated: #1c1916;
+  --color-fg: #ebe6dc;
+  --color-muted: #9a9288;
+  --color-subtle: #6e675f;
+  --color-primary: #d6d0c6;
+  --color-primary-foreground: #0a0908;
+  --color-border: #2c2823;
+  --color-ring: #d6d0c6;
+  --color-root-note: #c45c4a;
+  --color-root-note-fg: #fff4ef;
+  --color-scale-note: #ebe6dc;
+  --color-scale-note-fg: #141210;
+  --color-wood: #2a1a12;
+  --color-wood-deep: #1a100c;
+  --color-fret-wire: #b8b0a4;
+  --color-nut: #e8e0d0;
+  --color-inlay: #cfc6b8;
+  --color-string: #c4bdb3;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Oswald", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgb(255 255 255 / 0.08);
+  --shadow-border-hover: 0 0 0 1px rgb(255 255 255 / 0.13);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.fret-neck {
+  background-color: var(--color-wood);
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0,
+      transparent 3px,
+      color-mix(in oklab, black 7%, transparent) 4px,
+      transparent 7px
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, white 10%, var(--color-wood)) 0%,
+      var(--color-wood) 38%,
+      var(--color-wood-deep) 100%
+    );
+}
+
+.string-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--color-string) 40%, transparent),
+    var(--color-string) 12%,
+    var(--color-string) 88%,
+    color-mix(in oklab, var(--color-string) 40%, transparent)
+  );
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.35);
+}
+
+.fret-wire {
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, white 55%, var(--color-fret-wire)),
+    var(--color-fret-wire) 40%,
+    color-mix(in oklab, black 25%, var(--color-fret-wire))
+  );
+  box-shadow: 1px 0 0 rgb(0 0 0 / 0.35);
+}
+
+.nut-bar {
+  width: 6px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, white 30%, var(--color-nut)),
+    var(--color-nut) 50%,
+    color-mix(in oklab, black 18%, var(--color-nut))
+  );
+  box-shadow: 2px 0 0 rgb(0 0 0 / 0.4);
+}
